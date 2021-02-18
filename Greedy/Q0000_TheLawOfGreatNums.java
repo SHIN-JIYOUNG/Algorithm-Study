@@ -11,6 +11,9 @@ import java.util.Arrays;
  * 것이라 간주한다. ex. [3, 4, 3, 4, 3], m=7, k=2 일 시, 2번째 4와 4번째 4가 2번씩 번갈아가며 더해져도 된다는
  * 것이다.
  * 
+ * 풀이방법: 그리디 알고리즘을 이용, 배열을 정렬 후, 마지막 인덱스가 가장 큰 숫자이기 때문에 최대한 (M회)더한 후, 마지막에서 두번째
+ * 인덱스를 1번만 더하여 총 N회를 채운다 
+ * 
  * @author JIYOUNG
  *
  */
@@ -31,22 +34,22 @@ public class Q0000_TheLawOfGreatNums {
 			arr[idx] = Integer.parseInt(inputArr[idx++]);
 		}
 
-		Arrays.sort(arr);
+		Arrays.sort(arr); //오름차순 정렬, 가장 큰 숫자는 맨 뒤에 있을 것 
 
 		while (N != 0) {
 			for (int i = 0; i < M; i++) {
-				result += arr[size - 1];
+				result += arr[size - 1]; //맨 뒤의 숫자를 M회 더한다 
 				N--;
-				if (N == 0) {
-					System.out.println(result);
-					return;
+				if (N == 0) { //더해가는 도중 모든 횟수를 다 차감했다면 
+					System.out.println(result);//답 반환 후 
+					return;//나간다 
 				}
 			}
-			result += arr[size - 2];
+			result += arr[size - 2];//맨 뒤의 숫자를 M회 더한 후에는 뒤에서 두번째 숫자를 더한다 
 			N--;
-			if (N == 0) {
-				System.out.println(result);
-				return;
+			if (N == 0) {//더해가는 도중 모든 횟수를 다 차감했다면 
+				System.out.println(result);//답 반환 후 
+				return;//나간다 
 			}
 		}
 	}
