@@ -9,7 +9,7 @@
     * [BAEKJOON (BOJ)] (https://boj.co.kr)
     * [Programmers] (https://programmers.co.kr/)
 * Book
-    * 이것이 코딩테스트이다 (나동빈 저)
+    * 이것이 코딩테스트다 (나동빈 저)
 
 ## Used programming language
 * Language
