@@ -46,4 +46,37 @@ public class Q0000_Greedy_PickBalling {
 		}
 		System.out.println(total);
 	}
+	
+///////////////////////////
+//모범 코드
+//	
+//	public class Main {
+//
+//	    public static int n, m;
+//	    // 1부터 10까지의 무게를 담을 수 있는 배열
+//	    public static int[] arr = new int[11]; //볼링공의 무게가 10까지니까 11개 크기의 배열을 만들어줘야 함 
+//
+//	    public static void main(String[] args) {
+//	        Scanner sc = new Scanner(System.in);
+//	        n = sc.nextInt();
+//	        m = sc.nextInt();
+//
+//	        for (int i = 0; i < n; i++) {
+//	            int x = sc.nextInt(); //들어오는 볼링공의 무게를 인덱스로 두고, 그 공의 갯수를 값으로 채워줄 것임 
+//	            arr[x] += 1;//갯수를 값으로 채워주기 
+//	        }
+//
+//	        int result = 0;
+//
+//	        // 1부터 m까지의 각 무게에 대하여 처리
+//	        for (int i = 1; i <= m; i++) { //각 무게를 돌아가며 
+//	            n -= arr[i]; // 무게가 i인 볼링공의 개수(즉 A가 선택할 수 있는 개수)를 제외해나가면서 B를 세어야 함.
+//			//만약 1을 고른다면, 1이 다른 모든 볼링공들을 더할 수 있는 것이기 때문에 1을 빼고 생각해줘야 함 
+//	            result += arr[i] * n; // B가 선택하는 경우의 수(즉 모든 볼링공의 갯수에서 i의 갯수를 뺀 갯수가 B가 택할 수 있는 경우의수이다) 와 곱해주기
+//	        }
+//
+//	        System.out.println(result);
+//	    }
+//	}
+
 }
